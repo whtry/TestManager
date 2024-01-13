@@ -17,9 +17,9 @@ import main
 open_time = 0
 
 
-class Main(main.Main):
+class Home(main.Main):
     def __init__(self):
-        super().main_path
+        super().__init__()
         self.child_window = None
         self.main_window = None
         self.main_json = None
@@ -107,7 +107,7 @@ class Main(main.Main):
         menu_bar = tk.Menu(self.main_window)
 
         file_menu = tk.Menu(menu_bar, tearoff=False)
-        file_menu.add_command(label="打开", command=Main)
+        file_menu.add_command(label="打开", command=Home)
         file_menu.add_command(label="保存", command='')
         file_menu.add_separator()
         file_menu.add_command(label="退出", command=self.main_window.quit)
@@ -125,4 +125,4 @@ class Main(main.Main):
 
 
 if __name__ == '__main__':
-    Main()
+    Home()

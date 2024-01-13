@@ -1,2 +1,4 @@
 # TestManager
- A exam manager. Only Chinese Now!
+ An exam manager. Only Chinese Now!
+
+# Thanks

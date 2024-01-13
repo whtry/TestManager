@@ -19,8 +19,6 @@ def pic2pdf(img_path, pdf_path):
     """
     doc = fitz.open()
 
-    # 循环path中的文件，可import os 然后用 for img in os.listdir(img_path)实现
-    # 这里为了让文件以1，2，3的形式进行拼接，就偷懒循环文件名中的数字。
     for img in os.listdir(img_path):
         img_file = img_path + '/' + img
         img_doc = fitz.open(img_file)
@@ -28,6 +26,7 @@ def pic2pdf(img_path, pdf_path):
         pdf_name = img + '.pdf'
         img_pdf = fitz.open(pdf_name, pdf_bytes)
         doc.insert_pdf(img_pdf)
+
     doc.save(f'{pdf_path}/combined.pdf')
     doc.close()
 
